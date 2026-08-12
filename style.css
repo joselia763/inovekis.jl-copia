@@ -1,0 +1,825 @@
+/* =========================
+RESET GERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =========================
+CORES DA INOVEKIDS
+========================= */
+
+:root {
+    --azul-principal: #0052CC;
+    --azul-escuro: #012169;
+    --azul-claro: #00A3FF;
+    --amarelo-destaque: #FFD700;
+    --laranja: #FF8C00;
+    --verde-whatsapp: #25D366;
+    --branco: #FFFFFF;
+    --cinza-texto: #333333;
+    --cinza-claro: #F5F7FA;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* =========================
+MENU
+========================= */
+
+header {
+    width: 100%;
+    background: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--azul-principal);
+    letter-spacing: 1px;
+}
+
+.logo-espaco {
+    display: inline-block;
+    width: 10px;
+}
+
+/* =========================
+CORES ESPECIAIS DO i9
+========================= */
+
+.logo-i9-i {
+    color: #FF2A4B;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.logo-i9-9 {
+    color: #FFC700;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.cor-vermelho {
+    color: #FF2A4B;
+}
+
+.cor-laranja {
+    color: #FF6B00;
+}
+
+.cor-amarelo {
+    color: #FFD700;
+}
+
+.cor-verde {
+    color: #00E676;
+}
+
+.cor-azul-claro {
+    color: #00B0FF;
+}
+
+.cor-azul {
+    color: #2979FF;
+}
+
+.cor-roxo {
+    color: #651FFF;
+}
+
+.cor-rosa {
+    color: #F50057;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 45px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* BOTÃO MENU MOBILE */
+
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* =========================
+BANNER
+========================= */
+
+.banner {
+    width: 100%;
+    height: 75vh;
+    margin-top: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* CAMADA ESCURA */
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+/* TEXTO DO BANNER */
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.banner-texto h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.banner-texto p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* =========================
+SERVIÇOS
+========================= */
+
+.servicos {
+    width: 100%;
+    padding: 80px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.servicos h2 {
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.cards {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 320px;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.icone {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =========================
+SOBRE A INOVEKIDS
+========================= */
+
+.sobre {
+    width: 100%;
+    padding: 120px 20px 80px;
+    background: #ffffff;
+}
+
+.sobre-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.sobre-texto h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.sobre-texto ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sobre-texto ul li {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #555;
+}
+
+.sobre-imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    max-width: 560px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+}
+
+/* =========================
+DIFERENCIAIS
+========================= */
+
+.diferenciais {
+    width: 100%;
+    padding: 80px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.diferenciais h2 {
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.diferenciais-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.diferencial {
+    width: 320px;
+    padding: 35px 25px;
+    background: #f8f8f8;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    transition: .3s;
+}
+
+.diferencial:hover {
+    transform: translateY(-10px);
+}
+
+.diferencial h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.diferencial p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* =========================
+GALERIA
+========================= */
+
+.galeria {
+    width: 100%;
+    padding: 80px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.galeria-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.imagem-galeria {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.imagem-galeria img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: .4s;
+}
+
+.imagem-galeria img:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+CONTATO
+========================= */
+
+.contato {
+    width: 100%;
+    padding: 80px 20px;
+    background: #FFD700;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.botao-whatsapp {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.botao-whatsapp:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+FORMULÁRIO ORÇAMENTO
+========================= */
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.formulario-contato textarea {
+    height: 120px;
+    resize: none;
+}
+
+.formulario-contato button {
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    background: #333333;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.formulario-contato button:hover {
+    background: #555;
+    transform: scale(1.05);
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.footer-container h3 {
+    color: #FFD700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-logo,
+.footer-links,
+.footer-contato {
+    flex: 1;
+}
+
+.footer-logo p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #FFD700;
+    transform: translateX(5px);
+}
+
+.footer-contato p {
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* =========================
+INSTAGRAM
+========================= */
+
+.footer-contato a {
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: inherit;
+    text-transform: none;
+}
+
+.footer-contato a:hover {
+    color: inherit;
+}
+
+.footer-contato .fa-instagram {
+    background: linear-gradient(45deg,
+            #FEDA75,
+            #FA7E1E,
+            #D62976,
+            #962FBF,
+            #4F5BD5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* =========================
+FOOTER FINAL
+========================= */
+
+.footer-copy {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-copy p {
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* =========================
+RESPONSIVIDADE
+TABLET
+769px ATÉ 1024px
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* MENU */
+
+    nav {
+        padding: 18px 25px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    nav ul {
+        gap: 30px;
+        margin-left: 40px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* BANNER */
+
+    .banner {
+        height: auto;
+        margin-top: 80px;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        padding: 80px 30px;
+    }
+
+    .sobre-container {
+        gap: 30px;
+        align-items: center;
+    }
+
+    .sobre-texto h2 {
+        font-size: 32px;
+    }
+
+    .sobre-texto h3 {
+        font-size: 24px;
+    }
+
+    .sobre-texto p {
+        font-size: 17px;
+    }
+
+    .sobre-texto ul li {
+        font-size: 17px;
+    }
+
+    .sobre-imagem img {
+        max-width: 450px;
+    }
+
+    /* SERVIÇOS */
+
+    .cards {
+        gap: 20px;
+    }
+
+    .card {
+        width: 30%;
+        padding: 30px 20px;
+    }
+
+    /* DIFERENCIAIS */
+
+    .diferenciais-container {
+        gap: 20px;
+    }
+
+    .diferencial {
+        width: 30%;
+        padding: 30px 20px;
+    }
+
+    /* GALERIA */
+
+    .galeria-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* CONTATO */
+
+    .formulario-contato {
+        max-width: 550px;
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        gap: 30px;
+    }
+}
+
+/* =========================
+CELULAR
+ATÉ 768px
+========================= */
+
+@media (max-width: 768px) {
+
+    /* MENU */
+
+    .menu-icon {
+        display: block;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+    }
+
+    nav ul.ativo {
+        display: flex;
+    }
+
+    /* BANNER */
+
+    .banner {
+        height: auto;
+    }
+
+    .banner img {
+        object-position: center top;
+    }
+
+    .banner-texto h1 {
+        font-size: 32px;
+    }
+
+    .banner-texto p {
+        font-size: 18px;
+    }
+
+    .botao {
+        padding: 12px 25px;
+    }
+
+    /* SOBRE */
+
+    .sobre {
+        padding-top: 45px;
+    }
+
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-imagem img {
+        max-width: 350px;
+    }
+
+    .sobre-texto h2,
+    .servicos h2,
+    .diferenciais h2,
+    .galeria h2,
+    .contato h2 {
+        font-size: 30px;
+    }
+
+    /* SERVIÇOS */
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* DIFERENCIAIS */
+
+    .diferenciais-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .diferencial {
+        width: 90%;
+    }
+
+    /* GALERIA */
+
+    .galeria-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+}
