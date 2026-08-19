@@ -23,6 +23,7 @@ if (botao) {
     botao.addEventListener("click", function () {
 
         const inputs = document.querySelectorAll(".formulario-contato input");
+        const selectHorario = document.querySelector(".formulario-contato select");
         const textarea = document.querySelector(".formulario-contato textarea");
 
         let responsavel = inputs[0].value.trim();
@@ -30,6 +31,7 @@ if (botao) {
         let crianca = inputs[2].value.trim();
         let escola = inputs[3].value.trim();
         let endereco = inputs[4].value.trim();
+        let horario = selectHorario.value;
         let observacao = textarea.value.trim();
 
         if (
@@ -38,23 +40,26 @@ if (botao) {
             crianca === "" ||
             escola === "" ||
             endereco === "" ||
-            observacao === ""
+            horario === ""
         ) {
             alert("Por favor, preencha todos os campos obrigatórios.");
             return;
         }
 
         let mensagem =
-            "Olá, gostaria de solicitar um orçamento.%0A%0A" +
-            "Nome do responsável: " + responsavel + "%0A" +
-            "Telefone: " + telefone + "%0A" +
-            "Nome da criança: " + crianca + "%0A" +
-            "Escola: " + escola + "%0A" +
-            "Bairro/Endereço: " + endereco + "%0A" +
+            "Olá, gostaria de solicitar um orçamento.\n\n" +
+            "Nome do responsável: " + responsavel + "\n" +
+            "Telefone: " + telefone + "\n" +
+            "Nome da criança: " + crianca + "\n" +
+            "Escola: " + escola + "\n" +
+            "Endereço do ponto de partida: " + endereco + "\n" +
+            "Horário: " + horario + "\n" +
             "Observações: " + observacao;
 
+        let mensagemCodificada = encodeURIComponent(mensagem);
+
         window.open(
-            "https://wa.me/5561995657726?text=" + mensagem,
+            "https://wa.me/5561995657726?text=" + mensagemCodificada,
             "_blank"
         );
 
