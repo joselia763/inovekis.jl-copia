@@ -311,25 +311,32 @@
                 Preencha os dados abaixo e entraremos em contato.
             </p>
 
-            <form class="formulario-contato" id="form-orcamento">
+           <form class="formulario-contato" id="form-orcamento">
 
-                <input type="text" placeholder="Nome do responsável" required>
+    <input type="text" placeholder="Nome do responsável" required>
 
-                <input type="tel" placeholder="Telefone / WhatsApp" required>
+    <input type="tel" placeholder="Telefone / WhatsApp" required>
 
-                <input type="text" placeholder="Nome da criança" required>
+    <input type="text" placeholder="Nome da criança" required>
 
-                <input type="text" placeholder="Nome da escola" required>
+    <input type="text" placeholder="Nome da escola" required>
 
-                <input type="text" placeholder="Bairro ou endereço" required>
+    <input type="text" placeholder="Endereço do ponto de partida" required>
 
-                <textarea placeholder="Observações" required></textarea>
+    <select required>
+        <option value="">Selecione o horário</option>
+        <option value="Matutino">Matutino</option>
+        <option value="Intermediário">Intermediário</option>
+        <option value="Vespertino">Vespertino</option>
+    </select>
 
-                <button type="button" id="btn-orcamento">
-                    Solicitar orçamento
-                </button>
+    <textarea placeholder="Observações"></textarea>
 
-            </form>
+    <button type="button" id="btn-orcamento">
+        Solicitar orçamento
+    </button>
+
+</form>
 
         </section>
 
